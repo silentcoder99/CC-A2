@@ -1,0 +1,22 @@
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /
+  script: tasks.php
+- url: /tasks
+  script: tasks.php
+- url: /addTask
+  script: addTask.php
+- url: /editTask
+  script: editTask.php
+- url: /deleteTask
+  script: deleteTask.php
+
+- url: /stylesheets
+  static_dir: stylesheets
+
+env_variables:
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/innate-legacy-255921:us-central1:todos;dbname=todos
+  MYSQL_USER: michael
+  MYSQL_PASSWORD: x@s^Xgyflq1iX8aKUuxP%&
